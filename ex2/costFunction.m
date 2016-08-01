@@ -9,7 +9,7 @@ m = length(y); % number of training examples
 
 % You need to return the following variables correctly
 h = sigmoid(X * theta);
-J = (-y' * log(h) - (ones(m, 1) - y)' * log(ones(m, 1) - h)) / m;
+J = (-y' * log(h) - (1 - y)' * log(1 - h)) / m;
 grad = ((h - y)' * X) / m;
 
 % ====================== YOUR CODE HERE ======================

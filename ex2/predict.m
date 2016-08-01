@@ -5,7 +5,7 @@ function p = predict(theta, X)
 %   threshold at 0.5 (i.e., if sigmoid(theta'*x) >= 0.5, predict 1)
 
 % You need to return the following variables correctly
-p = arrayfun(@(x) x >= 0.5, sigmoid(X * theta));
+p = sigmoid(X * theta) >= 0.5;
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Complete the following code to make predictions using
