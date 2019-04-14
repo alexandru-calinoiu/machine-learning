@@ -9,9 +9,9 @@ m = length(y); % number of training examples
 
 % You need to return the following variables correctly 
 h = sigmoid(X * theta);
-meningfullTheta = theta(2:length(theta),:);
+meningfullTheta = theta(2:end,:);
 reg = (lambda * (ones(1, length(theta) - 1) * meningfullTheta.^2)) / (2*m);
-J = (-y' * log(h) - (ones(m, 1) - y)' * log(ones(m, 1) - h)) / m + reg;
+J = (-y' * log(h) - (1 - y)' * log(1 - h)) / m + reg;
 grad = ((h - y)' * X) / m + [0, (lambda .* meningfullTheta') ./ m];
 
 % ====================== YOUR CODE HERE ======================
