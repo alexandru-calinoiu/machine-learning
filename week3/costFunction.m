@@ -7,4 +7,3 @@ gradient(1) = 2*(theta(1)-5);
 gradient(2) = 2*(theta(2)-5);
 
 end
-
